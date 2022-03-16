@@ -1,0 +1,70 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.header {
+  background-image: linear-gradient(
+      rgb(57 70 89 / 0.7) 30%,
+      rgb(57 70 89 / 0.7) 50%
+    ),
+    url(../img/workspace.jpg);
+  /* background-image: url(../img/coffee.jpg); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  padding: 5rem 0;
+
+  @include m.tablet {
+    padding: 3rem 0;
+  }
+
+  .logo {
+    margin: 0 auto;
+    max-width: 10rem;
+
+    img {
+      height: 8rem;
+    }
+
+    @include m.tablet {
+      margin: 0;
+    }
+  }
+
+  .container-header {
+    padding: 8rem 0;
+    @include m.desktop {
+      padding: 10rem 0;
+    }
+  }
+
+  h1 {
+    color: v.$blanco;
+    font-size: 4rem;
+    @include m.tablet {
+      font-size: 5rem;
+      max-width: 50%;
+    }
+    @include m.desktop {
+      max-width: 50%;
+    }
+  }
+
+  .button-start {
+    @include m.button(v.$first, v.$second);
+    border: 2px solid grey;
+    margin-top: 2rem;
+    display: block;
+  }
+  .button-practice {
+    @include m.button(v.$first, #7b7cb6);
+    border: 2px solid grey;
+    margin-top: 2rem;
+    display: block;
+  }
+  .button-start,
+  .button-practice {
+    @include m.tablet {
+      max-width: 30%;
+    }
+  }
+}

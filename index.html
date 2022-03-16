@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlashCards</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="build/css/app.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-grid">
+            <div class="logo">
+                <img src="build/img/cards2.png" alt="logo FlashCards">
+            </div>
+
+            <div class="container-header">
+                <h1>Make your flashcards in minutes and start practicing</h1>
+                <a href="#create-cards" class="button-start">Start</a>
+                <a href="#practice-cards" class="button-practice">Practice</a>
+            </div>
+        </div>
+    </header>
+    <section class="container form">
+        <div class="form__container">
+            <h2 class="form__heading">Create your Cards</h2>
+            <form class="form__create">
+                <div class="form__field">
+                    <label for="front" class="form__label">Front</label>
+                    <input id="front" class="form__input front" placeholder="Question">
+                </div>
+                <div class="form__field">
+                    <label for="back" class="form__label">Back</label>
+                    <input id="back" class="form__input back" placeholder="Answer">
+                </div>
+                <input type="submit" class="form__submit" value="Create">
+            </form>
+        </div>
+    </section>
+    <section class="container practice">
+        <div class="practice__board">
+            <div class="practice__front">
+                <h2 class="front-card">Front</h2>
+            </div>
+            <div class="practice__back">
+                <h2 class="back-card">Back</h2>
+            </div>
+        </div>
+        <div class="practice__next-prev-btns">
+            <button class="practice__btn" type="button">Change</button>
+        </div>
+    </section>
+    <script src="./src/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.form {
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+  max-width: 80rem;
+
+  &__container {
+    background-color: v.$form-card;
+    padding: v.$space;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 10px;
+  }
+
+  &__heading {
+    color: v.$blanco;
+    text-align: center;
+  }
+
+  &__field {
+    margin-bottom: 1rem;
+  }
+
+  &__label {
+    display: block;
+    text-transform: uppercase;
+    color: v.$blanco;
+    margin: 1rem 0;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 1.5rem;
+    border: none;
+  }
+
+  &__submit {
+    margin-top: 2rem;
+    @include m.button(#5896dd, v.$blanco);
+    @include m.tablet {
+      width: 100%;
+    }
+  }
+}
+
+.error,
+.success {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  font-size: 1.5rem;
+}
+.error {
+  color: orange;
+}
+
+.success {
+  color: #4af7ff;
+}

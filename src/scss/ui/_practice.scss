@@ -1,0 +1,67 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.practice {
+  padding: 5rem;
+  max-width: 80rem;
+  h1 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  &__board {
+    height: 40rem;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+  }
+
+  &__front,
+  &__back {
+    cursor: pointer;
+    border-radius: 40px;
+    padding: 12rem;
+    box-shadow: 0 0px 20px 0 #686868;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__front {
+    background-color: v.$blanco;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    color: black;
+    position: absolute;
+    text-align: center;
+  }
+
+  &__back {
+    background-color: v.$blanco;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    color: black;
+    text-align: center;
+    position: absolute;
+    transform: rotateY(180deg);
+  }
+
+  &__next-prev-btns {
+    text-align: center;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__btn {
+    @include m.button(#5896dd, v.$blanco);
+    padding: 0.2rem 1rem;
+    font-size: 3rem;
+  }
+}
+
+.flipCard {
+  transform: rotateY(180deg);
+}
